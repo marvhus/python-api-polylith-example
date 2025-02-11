@@ -16,6 +16,7 @@ dependencies = [
 [tool.uv]
 managed = true
 dev-dependencies = [
+    "ipython>=8.32.0",
     "polylith-cli>=1.26.0",
     "pytest>=8.3.4",
 ]
