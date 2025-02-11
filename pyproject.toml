@@ -14,8 +14,10 @@ dependencies = [
 ]
 
 [tool.uv]
+managed = true
 dev-dependencies = [
-    "polylith-cli>=1.26.0"
+    "polylith-cli>=1.26.0",
+    "pytest>=8.3.4",
 ]
 
 [tool.uv.workspace]
