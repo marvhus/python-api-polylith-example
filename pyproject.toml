@@ -30,5 +30,7 @@ dev-mode-dirs = ["components", "bases", "development", "."]
 
 [tool.polylinth.bricks]
 "bases/example/api_foo" = "example/api_foo"
+"bases/example/api_bar" = "example/api_bar"
 "components/example/log" = "example/log"
 "components/example/service_foo" = "example/service_foo"
+"components/example/math_utils" = "example/math_utils"
