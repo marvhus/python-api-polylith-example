@@ -18,6 +18,6 @@ async def data(key: str) -> dict:
     values = retrieve_some_data(key)
 
     return {
-        "success": not values == None,
+        "success": not values is None,
         "values": values,
     }
