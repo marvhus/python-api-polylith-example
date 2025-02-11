@@ -9,6 +9,16 @@ To test if the code works as expected, and compiles / runs, use pytest:
 ```
 uv run pytest
 ```
+To only test one base/component, you can do this:
+```
+uv run pytest -k api_foo
+```
+Where `api_foo` is the name of the base or component you want to test.
+
+You can also test multiple at once like this:
+```
+uv run pytest -k "api_foo or math_utils or service_foo"
+```
 
 
 ## Running
