@@ -20,6 +20,12 @@ You can also test multiple at once like this:
 uv run pytest -k "api_foo or math_utils or service_foo"
 ```
 
+You can also test against all changes in the last N commits:
+```
+uv run pytest -k "$(uv run poly diff --since @~10 --bricks --short | sed "s/,/ or /g")"
+```
+Where `@~10` indicates to compare it againsts what it was like 10 commits ago.  You can also give a specific commit, etc.
+
 
 ## Running
 To run a specific project, use the `run.sh` script, and pass in the name of a project, e.g. `api_foo` (this will get checked, so it will tell you if the project doesn't exist).
