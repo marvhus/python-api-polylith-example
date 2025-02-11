@@ -23,3 +23,4 @@ packages = ["example"]
 [tool.polylith.bricks]
 "../../bases/example/api_foo" = "example/api_foo"
 "../../components/example/log" = "example/log"
+"../../components/example/service_foo" = "example/service_foo"
