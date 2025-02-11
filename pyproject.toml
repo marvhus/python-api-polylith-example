@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "python-api-polylith-example"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115.8",
+    "uvicorn>=0.3.4",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "polylith-cli>=1.26.0"
+]
+
+[tool.uv.workspace]
+members = ["projects/*"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build]
+dev-mode-dirs = ["components", "bases", "development", "."]
+
+
+[tool.polylinth.bricks]
+"bases/example/api_foo" = "example/api_foo"
+"components/example/log" = "example/log"

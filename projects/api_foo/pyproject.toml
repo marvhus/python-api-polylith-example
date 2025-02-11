@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling", "hatch-polylith-bricks"]
+build-backend = "hatchling.build"
+
+[project]
+name = "api_foo"
+version = "0.1.0"
+
+requires-python = ">=3.12"
+
+dependencies = [
+    "fastapi>=0.115.8",
+    "uvicorn>=0.3.4",
+]
+
+# This section is needed for the Hatchling build backend, to activate the polylith build hook.
+[tool.hatch.build.hooks.polylith-bricks]
+
+# This section is needed for building
+[tool.hatch.build.targets.wheel]
+packages = ["example"]
+
+[tool.polylith.bricks]
+"../../bases/example/api_foo" = "example/api_foo"
+"../../components/example/log" = "example/log"
