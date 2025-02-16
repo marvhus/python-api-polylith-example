@@ -2,7 +2,7 @@ from .core import app, logger
 import marvhus.service_users.core as users_core
 import marvhus.service_users.models as users_models
 
-from fastapi import HTTPException
+from fastapi import HTTPException, status
 
 @app.get("/users")
 def get_users() -> users_models.Users:
@@ -30,28 +30,17 @@ def update_users(users: users_models.Users) -> dict:
         "updated": count,
     }
 
-@app.patch("/users/{id}")
-def update_user(user: users_models.User, id: str) -> dict:
-    success = users.update_user(id, user)
+@app.patch("/users/{id}", status_code = status.HTTP_204_NO_CONTENT)
+def update_user(user: users_models.User, id: str) -> None:
+    success = users_core.update_user(id, user)
 
     if not success:
         raise HTTPException(status_code=404, detail="User not found")
 
-    # NOTE(mvh): Maybe return a 204 No Content instead?
-    # This is kinda redundant.
-    return {
-        "success": true,
-    }
 
-@app.delete("/users/{id}")
-def remove_user(id: str) -> dict:
-    success = users.remove_user(id)
+@app.delete("/users/{id}", status_code = status.HTTP_204_NO_CONTENT)
+def remove_user(id: str) -> None:
+    success = users_core.remove_user(id)
 
     if not success:
         raise HTTPException(status_code=404, detail="User not found")
-
-    # NOTE(mvh): Maybe return a 204 No Content instead?
-    # This is kinda redundant.
-    return {
-        "success": true,
-    }
