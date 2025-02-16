@@ -37,7 +37,7 @@ def update_user(user: users_models.User, id: str) -> dict:
     if not success:
         raise HTTPException(status_code=404, detail="User not found")
 
-    # NOTE(mvh): Maybe return a 201 No Content instead?
+    # NOTE(mvh): Maybe return a 204 No Content instead?
     # This is kinda redundant.
     return {
         "success": true,
@@ -50,7 +50,7 @@ def remove_user(id: str) -> dict:
     if not success:
         raise HTTPException(status_code=404, detail="User not found")
 
-    # NOTE(mvh): Maybe return a 201 No Content instead?
+    # NOTE(mvh): Maybe return a 204 No Content instead?
     # This is kinda redundant.
     return {
         "success": true,
