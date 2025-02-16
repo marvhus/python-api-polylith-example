@@ -5,6 +5,7 @@ requires-python = ">=3.12"
 members = [
     "api-bar",
     "api-foo",
+    "api-users",
     "python-api-polylith-example",
 ]
 
@@ -50,6 +51,21 @@ requires-dist = [
 name = "api-foo"
 version = "0.1.0"
 source = { editable = "projects/api_foo" }
+dependencies = [
+    { name = "fastapi" },
+    { name = "uvicorn" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "fastapi", specifier = ">=0.115.8" },
+    { name = "uvicorn", specifier = ">=0.3.4" },
+]
+
+[[package]]
+name = "api-users"
+version = "0.1.0"
+source = { editable = "projects/api_users" }
 dependencies = [
     { name = "fastapi" },
     { name = "uvicorn" },
