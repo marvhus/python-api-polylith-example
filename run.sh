@@ -19,5 +19,7 @@ if [ ! -d "$PROJECT_DIR" ]; then
 fi
 
 echo "=============== Running project ==============="
+pushd ${PROJECT_DIR}
 uv sync
-uv run uvicorn marvhus.${PROJECT}.core:app --reload
+uv run uvicorn marvhus.${PROJECT}.core:app --reload || { popd; exit 1; }
+popd
