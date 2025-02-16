@@ -1,4 +1,4 @@
-from example.log import core
+from marvhus.log import core
 
 
 def test_sample():

@@ -20,4 +20,4 @@ fi
 
 echo "=============== Running project ==============="
 uv sync
-uv run uvicorn example.${PROJECT}.core:app --reload
+uv run uvicorn marvhus.${PROJECT}.core:app --reload

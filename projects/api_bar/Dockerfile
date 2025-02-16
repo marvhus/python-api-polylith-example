@@ -16,4 +16,4 @@ COPY ./$deps /code/$deps
 RUN pip install --no-cache-dir --upgrade --no-deps /code/$wheel
 RUN pip install -r /code/$deps
 
-CMD ["uvicorn", "example.api_bar.core:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "marvhus.api_bar.core:app", "--host", "0.0.0.0", "--port", "8000"]

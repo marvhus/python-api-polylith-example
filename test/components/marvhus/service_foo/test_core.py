@@ -1,4 +1,4 @@
-from example.service_foo import core
+from marvhus.service_foo import core
 
 
 def test_sample():

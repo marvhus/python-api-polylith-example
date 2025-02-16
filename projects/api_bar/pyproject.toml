@@ -18,9 +18,9 @@ dependencies = [
 
 # This section is needed for building
 [tool.hatch.build.targets.wheel]
-packages = ["example"]
+packages = ["marvhus"]
 
 [tool.polylith.bricks]
-"../../bases/example/api_bar" = "example/api_bar"
-"../../components/example/log" = "example/log"
-"../../components/example/math_utils" = "example/math_utils"
+"../../bases/marvhus/api_bar" = "marvhus/api_bar"
+"../../components/marvhus/log" = "marvhus/log"
+"../../components/marvhus/math_utils" = "marvhus/math_utils"

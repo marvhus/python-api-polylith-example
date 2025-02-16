@@ -1,4 +1,4 @@
-from example.math_utils import core
+from marvhus.math_utils import core
 
 
 def test_sample():

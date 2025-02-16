@@ -1,4 +1,4 @@
-from example.api_bar import core
+from marvhus.api_bar import core
 
 
 def test_sample():

@@ -1,5 +1,5 @@
-from example.log import get_logger
-import example.math_utils as mu
+from marvhus.log import get_logger
+import marvhus.math_utils as mu
 from fastapi import FastAPI
 
 logger = get_logger("api-bar")

@@ -1,5 +1,5 @@
-from example.log import get_logger
-from example.service_foo import retrieve_some_data
+from marvhus.log import get_logger
+from marvhus.service_foo import retrieve_some_data
 from fastapi import FastAPI
 
 logger = get_logger("api-foo-logger")
