@@ -32,8 +32,6 @@ dev-mode-dirs = ["components", "bases", "development", "."]
 
 
 [tool.polylinth.bricks]
-"bases/marvhus/api_foo" = "marvhus/api_foo"
-"bases/marvhus/api_bar" = "marvhus/api_bar"
 "components/marvhus/log" = "marvhus/log"
-"components/marvhus/service_foo" = "marvhus/service_foo"
-"components/marvhus/math_utils" = "marvhus/math_utils"
+"components/marvhus/service_users" = "marvhus/service_users"
+"bases/marvhus/api_users" = "marvhus/api_users"
