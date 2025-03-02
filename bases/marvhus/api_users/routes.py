@@ -4,6 +4,12 @@ import marvhus.service_users.models as users_models
 
 from fastapi import HTTPException, status
 
+@app.get("/assert")
+def get_assert() -> None:
+    assert false
+
+    return
+
 @app.get("/users")
 def get_users() -> users_models.Users:
     retrieved = users_core.get_users()
